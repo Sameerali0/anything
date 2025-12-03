@@ -61,3 +61,24 @@ nav a{
     color: #7127BA;
 
 }
+
+
+.about{
+    padding: 80px 20px;
+
+}
+
+
+.about-text h2{
+
+    font-size: 45px;
+    color: #7127BA;
+
+}
+
+.about-text p{
+
+    font-size: 25px;
+    margin-top: 20px;
+    color: white;
+}
