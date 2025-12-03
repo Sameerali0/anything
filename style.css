@@ -3,20 +3,20 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+
 }
 
 body{
 
     font-family: Arial, sans-serif;
-    background: #000000;
+    background: #11071F;
 
 }
 
 header{
 
     padding: 15px  10px;
-    background-color: rgba(0, 255, 255, 0.521);
+    background-color: #1A0B2E;
 }
 
 
@@ -38,3 +38,26 @@ nav a{
 
 }
 
+.home{
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.home-content h1{
+
+
+    color: white;
+    font-size: 60px;
+}
+
+
+.home-content h1 span{
+
+    color: #7127BA;
+
+}
