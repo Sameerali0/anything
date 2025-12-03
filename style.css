@@ -82,3 +82,79 @@ nav a{
     margin-top: 20px;
     color: white;
 }
+
+
+.skills{
+
+    padding: 80px 20px;
+}
+
+.skills h2{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #7127BA;
+
+}
+
+.skills-content{
+
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.skill span{
+
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.progress-bar{
+
+    width: 50%;
+    height: 12px;
+    background: #1A0B2E;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 15px;
+
+}
+
+.progress{
+
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #A46CFF, #6E2CD3);
+
+}
+
+.progress.html{ 
+
+    width: 95%; 
+
+}
+.progress.css{ 
+    width: 90%; 
+
+}
+
+
+.progress.js{ 
+
+    width: 80%; 
+}
+
+.progress.react{ 
+
+    width: 70%; 
+
+
+}
+
+
