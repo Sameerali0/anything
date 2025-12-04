@@ -207,3 +207,18 @@ nav a{
     color: #A46CFF;
 
 }
+
+
+.contact{
+
+    padding: 80px 20px;
+}
+
+.contact h2{
+
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #7127BA;
+
+}
