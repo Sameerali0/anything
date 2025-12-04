@@ -263,3 +263,48 @@ nav a{
 
 }
 
+
+.contact-form{
+
+    background: #ffffff0d;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #8f53f067;
+    box-shadow: 0 0 20px #a46cff73;
+
+}
+
+
+.contact-form input, .contact-form textarea{
+
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 17px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14;
+    background: #1A0B2E;
+    color: white;
+}
+
+
+.contact-form button{
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    background: #A46CFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.contact-form button:hover{
+
+    background: #8b35ff;
+    box-shadow: 0 0 15px #A46CFF;
+
+}
