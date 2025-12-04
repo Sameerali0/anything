@@ -216,9 +216,50 @@ nav a{
 
 .contact h2{
 
-    font-size: 45px;
+    font-size: 50px;
     text-align: center;
     margin-bottom: 30px;
     color: #7127BA;
+    margin-bottom: 60px;
 
 }
+
+
+.contact-content{
+
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    gap: 280px;
+}
+
+
+.contact-info h3{
+
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #A46CFF;
+}
+
+
+.contact-info p{
+
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.social-links{
+
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links p{
+
+    color: #A46CFF;
+    font-weight: bold;
+
+}
+
