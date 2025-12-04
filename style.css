@@ -308,3 +308,55 @@ nav a{
     box-shadow: 0 0 15px #A46CFF;
 
 }
+
+
+footer{
+    background: #1A0B2E;
+    padding: 20px 40px;
+    border-top: 2px solid #A46CFF33;
+
+}
+
+footer p{
+
+    font-size: 20px;
+    color: white;
+
+}
+
+.footer-links{
+
+    margin: 10px 0;
+    text-align: center;
+
+}
+
+.footer-links a{
+
+    margin-left: 20px;
+    color: #A46CFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 23px;
+
+}
+
+.footer-links a:hover{
+
+
+    text-shadow: 0 0 10px #8452d4a2;
+}
+
+.footer-credit{
+
+    margin-left: 930px;
+
+}
+
+.footer-credit span{
+
+    color: #7127BA;
+    font-weight: bold;
+
+}
