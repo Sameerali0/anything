@@ -100,6 +100,51 @@ nav a{
 
 }
 
+.home-buttons{
+
+    margin-top: 30px;
+    display: flex;
+    gap: 25px;
+
+}
+
+.btn{
+
+    padding: 12px 30px;
+    background: #7127BA;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 2px solid transparent;
+
+}
+
+.btn:hover{
+
+    background: transparent;
+    border-color: #7127BA;
+    box-shadow: 0 0 15px #7127BA;
+
+}
+
+.btn2{
+
+    background: transparent;
+    border: 2px solid #7127BA;
+}
+
+
+.btn2:hover{
+
+    background: #7127BA;
+    box-shadow: 0 0 15px #7127BA;
+
+
+}
+
+
 .home-image img{
 
     width: 380px;
