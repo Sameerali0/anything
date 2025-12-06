@@ -474,23 +474,25 @@ nav a{
 
 
 .contact-form button{
-    width: 45%;
-    padding: 15px;
+    width: 40%;
+    padding: 13px 25px;
     font-size: 18px;
     border: none;
     border-radius: 12px;
-    background: #A46CFF;
+    background: #7127BA;
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    border: 2px solid transparent;
 
 }
 
 .contact-form button:hover{
 
-    background: #8b35ff;
-    box-shadow: 0 0 15px #A46CFF;
+    background: transparent;
+    border-color: #7127BA;
+    box-shadow: 0 0 15px #7127BA;
 
 }
 
