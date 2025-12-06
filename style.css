@@ -322,7 +322,7 @@ nav a{
 
 .projects{
 
-    padding: 50px 20px;
+    padding: 80px 20px;
 
 }
 
@@ -337,7 +337,7 @@ nav a{
 
 .project-content{
 
-    max-width: 1100px;
+    max-width: 1130px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -360,6 +360,8 @@ nav a{
     display: flex;
     transition: transform 0.5s ease;
     gap: 20px;
+    height: 320px;
+    margin: 25px;
 
 }
 
@@ -374,7 +376,24 @@ nav a{
     border: 2px solid transparent;
     text-decoration: none;
     flex: 0 0 300px;
-    opacity: 0.7;
+    opacity: 0.5;
+    transform: scale(0.8);
+
+}
+
+.project-card.active{
+
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 20px #7127BA;
+
+}
+
+.project-card.active:hover{
+
+    transform: scale(1.15) translateY(-10px);
+    border-color: #A46CFF;
+    box-shadow: 0 0 30px #A46CFF;
 
 }
 
@@ -382,12 +401,13 @@ nav a{
 
     transform: translateY(-10px);
     border-color: #A46CFF;
-    box-shadow: 0 0 20px #7127BA;
+    box-shadow: 0 0 15px #7127BA;
 }
 
 .project-img{
 
     width: 250px;
+    height: 200px;
     border-radius: 15px;
     margin-bottom: 20px;
 

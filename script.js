@@ -3,6 +3,7 @@ const dotsContainer= document.querySelector(".slider-dots")
 const sliderRow= document.querySelector(".slider-row")
 const previousBtn= document.querySelector(".slider-btn.prev")
 const nextBtn= document.querySelector(".slider-btn.next")
+const sliderWidth= document.querySelector(".slider-view").offsetWidth
 
 let currentIndex= 0
 const totalCards= projectCards.length
@@ -52,7 +53,8 @@ function slider(){
     })
 
     const cardWidth= projectCards[0].offsetWidth + 20
-    const sliderShift= -currentIndex * cardWidth
+    const centerGap= (sliderWidth / 2) - (cardWidth / 2)
+    const sliderShift= centerGap - (currentIndex * cardWidth)
     sliderRow.style.transform= `translateX(${sliderShift}px)`
 
     dots.forEach(dot => dot.classList.remove("active"))
