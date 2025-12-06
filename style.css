@@ -401,6 +401,27 @@ nav a{
 }
 
 
+.slider-btn{
+
+    background: #7127BA;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 20px;
+
+}
+
+.slider-btn:hover{
+
+    background: #A46CFF;
+
+}
+
+
 .contact{
 
     padding: 50px 40px;
