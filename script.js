@@ -1,6 +1,8 @@
 const projectCards= document.querySelectorAll(".project-card")
-const dotsContainer= document.querySelector("slider-dots")
+const dotsContainer= document.querySelector(".slider-dots")
 const sliderRow= document.querySelector(".slider-row")
+const previousBtn= document.querySelector(".slider-btn.prev")
+const nextBtn= document.querySelector(".slider-btn.next")
 
 let currentIndex= 0
 const totalCards= projectCards.length
@@ -16,6 +18,9 @@ for(let i= 0; i < totalCards; i++){
     }
 
     dot.addEventListener("click", () =>{
+
+        jumpToSlide(i)
+        resetAutoSlide()
 
     })
 
@@ -47,7 +52,7 @@ function slider(){
     })
 
     const cardWidth= projectCards[0].offsetWidth + 20
-    const sliderShift= -currentIndex * cardWidth + cardWidth
+    const sliderShift= -currentIndex * cardWidth
     sliderRow.style.transform= `translateX(${sliderShift}px)`
 
     dots.forEach(dot => dot.classList.remove("active"))
@@ -55,4 +60,53 @@ function slider(){
 
 }
 
+
+function showNextSlide(){
+
+    currentIndex= (currentIndex + 1) % totalCards
+
+    slider()
+
+}
+
+function showPrevSlide(){
+
+    currentIndex= (currentIndex - 1 + totalCards) % totalCards
+
+    slider()
+
+}
+
+function jumpToSlide(index){
+
+    currentIndex= index
+
+    slider()
+
+}
+
+let autoSlideTimer= setInterval(showNextSlide, 3000)
+
+function resetAutoSlide(){
+
+    clearInterval(autoSlideTimer)
+    autoSlideTimer= setInterval(showNextSlide, 3000)
+
+}
+
 slider()
+
+
+nextBtn.addEventListener("click",() =>{
+
+    showNextSlide()
+    resetAutoSlide()
+
+})
+
+previousBtn.addEventListener("click",() =>{
+
+    showPrevSlide()
+    resetAutoSlide()
+
+})
