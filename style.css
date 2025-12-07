@@ -655,6 +655,7 @@ footer{
     background: #1A0B2E;
     padding: 20px 40px;
     border-top: 2px solid #A46CFF33;
+    text-align: center;
 
 }
 
@@ -668,7 +669,8 @@ footer p{
 .footer-links{
 
     margin: 10px 0;
-    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
 
 }
 
@@ -689,11 +691,11 @@ footer p{
     text-shadow: 0 0 10px #8452d4a2;
 }
 
-/* .footer-credit{
+.footer-credit{
 
-    margin-left: 930px;
+    margin-bottom: 5px;
 
-} */
+}
 
 .footer-credit span{
 
@@ -772,4 +774,11 @@ footer p{
     to{ 
         transform: rotate(360deg);
     }
+}
+
+
+.loading-page.hide{
+
+    display: none;
+
 }

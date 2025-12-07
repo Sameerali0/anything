@@ -140,3 +140,15 @@ themeBtn.addEventListener("click",() =>{
     }
 
 })
+
+window.addEventListener("load", ()=>{
+
+    const loading= document.querySelector(".loading-page")
+
+    setTimeout(() =>{
+
+        loading.classList.add("hide")
+
+    }, 2000)
+
+})
