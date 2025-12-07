@@ -495,7 +495,7 @@ nav a{
     margin: auto;
     display: flex;
     justify-content: space-between;
-    gap: 80px;
+    gap: 100px;
 }
 
 
@@ -520,8 +520,17 @@ nav a{
 
     margin-top: 25px;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
+
+.social-links a{
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
 
 .social-links .link{
 
@@ -537,6 +546,28 @@ nav a{
 
     text-shadow: 0 0 10px #A46CFF;
 }
+
+.social-links .icon{
+
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.social-links .github{
+
+    background-color: white;
+    border-radius: 50%;
+    
+}
+
+.social-links .icon:hover{
+
+    transform: scale(1.2);
+}
+
 
 
 .contact-form{
