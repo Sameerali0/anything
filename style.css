@@ -228,7 +228,7 @@ nav a{
 
 .skills{
 
-    padding: 50px 20px;
+    padding: 65px 20px;
 }
 
 .skills h2{
@@ -355,7 +355,7 @@ nav a{
 
 .projects{
 
-    padding: 50px 20px;
+    padding: 65px 20px;
 
 }
 
@@ -363,7 +363,7 @@ nav a{
 
     font-size: 45px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: #7127BA;
 
 }
@@ -508,7 +508,7 @@ nav a{
 
 .contact{
 
-    padding: 50px 40px;
+    padding: 65px 40px;
     margin-bottom: 55px;
 }
 
@@ -700,4 +700,29 @@ footer p{
     color: #7127BA;
     font-weight: bold;
 
+}
+
+
+
+
+.light{
+
+    background: #e0d6d6;
+    color: black;
+
+}
+
+.light header, .light footer{
+    
+    background: white;
+}
+
+
+.light p, .light h1{
+    color: black;
+}
+
+.light span, h2, h3, .btn2,.light nav a, .light .footer-links a ,.light .toggle{
+
+    color: #7127BA;
 }
