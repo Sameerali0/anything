@@ -27,6 +27,13 @@ header{
 
 }
 
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
 
 nav ul{
     list-style: none;
@@ -45,6 +52,19 @@ nav a{
     font-weight: bold;
 
 }
+
+.toggle{
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    right: 20px;
+
+}
+
 
 .home{
 
