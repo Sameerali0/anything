@@ -724,9 +724,14 @@ footer p{
     color: black;
 }
 
-.light span, h2, h3, .btn2,.light nav a, .light .footer-links a ,.light .toggle{
+.light span, h2, h3, .btn2,.light nav a, .light .footer-links a ,.light .toggle , .light .btn:hover ,.light .contact-form button:hover{
 
     color: #7127BA;
+}
+
+.light .btn2:hover{
+
+    color: white;
 }
 
 
