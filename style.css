@@ -53,6 +53,18 @@ nav a{
 
 }
 
+.nav-underline{
+
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background: #A46CFF;
+    border-radius: 5px;
+    transition: 0.3s ease;
+
+}
+
+
 nav a.active{
 
     color: #A46CFF;
@@ -727,7 +739,8 @@ footer p{
 }
 
 
-.light p, .light h1{
+.light p, .light h1, .light nav a.active{
+    font-weight: bold;
     color: black;
 }
 

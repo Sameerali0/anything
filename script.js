@@ -6,6 +6,7 @@ const nextBtn= document.querySelector(".slider-btn.next")
 const sliderWidth= document.querySelector(".slider-view").offsetWidth
 const sections= document.querySelectorAll("section")
 const navLinks= document.querySelectorAll("nav ul li a")
+const navline= document.querySelector(".nav-underline")
 
 let currentIndex= 0
 const totalCards= projectCards.length
@@ -155,6 +156,16 @@ window.addEventListener("load", ()=>{
 
 })
 
+function line(activeLink){
+
+    const linkPos= activeLink.getBoundingClientRect()
+    const navPos= document.querySelector("nav").getBoundingClientRect()
+
+    navline.style.width= linkPos.width +"px"
+    navline.style.left= (linkPos.left - navPos.left) +"px"
+
+}
+
 window.addEventListener("scroll",() =>{
 
     let currentSection= ""
@@ -179,9 +190,12 @@ window.addEventListener("scroll",() =>{
         if(link.getAttribute("href") === `#${currentSection}`){
 
             link.classList.add("active")
+            line(link)
 
         }
 
     })
 
 })
+
+line(navLinks[0])
