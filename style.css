@@ -53,6 +53,13 @@ nav a{
 
 }
 
+nav a.active{
+
+    color: #A46CFF;
+    
+}
+
+
 .toggle{
 
     background: transparent;

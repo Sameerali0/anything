@@ -4,6 +4,8 @@ const sliderRow= document.querySelector(".slider-row")
 const previousBtn= document.querySelector(".slider-btn.prev")
 const nextBtn= document.querySelector(".slider-btn.next")
 const sliderWidth= document.querySelector(".slider-view").offsetWidth
+const sections= document.querySelectorAll("section")
+const navLinks= document.querySelectorAll("nav ul li a")
 
 let currentIndex= 0
 const totalCards= projectCards.length
@@ -150,5 +152,36 @@ window.addEventListener("load", ()=>{
         loading.classList.add("hide")
 
     }, 2000)
+
+})
+
+window.addEventListener("scroll",() =>{
+
+    let currentSection= ""
+
+    sections.forEach(section =>{
+
+        const sectionTop= section.offsetTop - 150
+        const sectionHeight= section.clientHeight
+
+        if(pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight){
+
+            currentSection= section.id
+
+        }
+
+    })
+
+    navLinks.forEach(link =>{
+
+        link.classList.remove("active")
+
+        if(link.getAttribute("href") === `#${currentSection}`){
+
+            link.classList.add("active")
+
+        }
+
+    })
 
 })
