@@ -199,3 +199,32 @@ window.addEventListener("scroll",() =>{
 })
 
 line(navLinks[0])
+
+const contactForm= document.querySelector(".contact-form")
+
+contactForm.addEventListener("submit", function(e){
+    e.preventDefault()
+
+    const formData= new FormData(contactForm)
+
+    fetch(contactForm.action,{
+
+        method: "POST",
+        body: formData,
+
+    })
+
+    .then(()=>{
+
+        alert("Your message has been sent successfully!")
+
+        contactForm.reset()
+
+    })
+    .catch(()=>{
+
+        alert("Something went wrong! Please try again.")
+
+    })
+
+})
