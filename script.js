@@ -201,6 +201,29 @@ window.addEventListener("scroll",() =>{
 line(navLinks[0])
 
 const contactForm= document.querySelector(".contact-form")
+const formMessage= document.querySelector(".form-message")
+
+function message(msg, isError =false){
+
+    formMessage.innerHTML= msg
+
+    if(isError){
+        formMessage.classList.add("error")
+
+    }else{
+
+        formMessage.classList.remove("error")
+    }
+
+    formMessage.style.display="block"
+
+    setTimeout(() =>{
+
+        formMessage.style.display= "none"
+
+    }, 3000)
+    
+}
 
 contactForm.addEventListener("submit", function(e){
     e.preventDefault()
@@ -216,14 +239,14 @@ contactForm.addEventListener("submit", function(e){
 
     .then(()=>{
 
-        alert("Your message has been sent successfully!")
+        message("Your message has been sent successfully!")
 
         contactForm.reset()
 
     })
     .catch(()=>{
 
-        alert("Something went wrong! Please try again.")
+        message("Something went wrong! Please try again.", true)
 
     })
 
