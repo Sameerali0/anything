@@ -74,3 +74,23 @@ time{
     color: white;
     font-size: 50px;
 }
+
+
+.journey-bar{
+
+    width: 70%;
+    height: 6px;
+    background: #241b38;
+    margin: 70px auto;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+
+
+.bar{
+
+    height: 100%;
+    background: #a86bff;
+}
