@@ -23,6 +23,8 @@ body{
 
 h1{
 
+    font-size: 50px;
+    margin-top: 15px;
     color: #a86bff;
     margin-bottom: 5%; 
 }
@@ -46,4 +48,29 @@ h1{
     cursor: pointer;
     font-size: 19px;
 
+}
+
+.journey{
+
+    margin-top: 12%;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+
+}
+
+.card{
+
+    min-width: 220px;
+    background: #151426;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #7f73f133;
+
+}
+
+time{
+
+    color: white;
+    font-size: 50px;
 }
