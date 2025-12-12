@@ -92,5 +92,6 @@ time{
 .bar{
 
     height: 100%;
+    width: 0;
     background: #a86bff;
 }
