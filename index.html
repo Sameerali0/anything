@@ -7,14 +7,68 @@
 </head>
 <body>
 
-    <div>
+    <div class="home-page">
         <h1>Welcome</h1>
         <p>click what you want to see</p>
 
-        <div>
-            <a href="portfolio.html">Portfolio</a>
+        <div class="home-page-buttons">
+            <a href="portfolio.html" class="home-page-btn">Portfolio</a>
+            <a href="journey.html" class="home-page-btn">Journey</a>
         </div>
     </div>
+
+    <style>
+        body{
+
+            background-color: black;
+            font-family: Arial, sans-serif;
+
+        }
+
+        h1{
+
+            font-size: 50px;
+            font-weight: bold;
+
+        }
+
+        p{
+            
+            margin-top: 12%;
+            font-size: 30px;
+            font-weight: bold;
+            color: #A46CFF;
+
+        }
+
+        .home-page{
+
+            text-align: center;
+            color: white;
+
+        }
+
+        .home-page-buttons{
+
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+        }
+
+        .home-page-btn{
+
+            padding: 12px 22px;
+            background: #A46CFF;
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+    </style>
     
 </body>
 </html>
