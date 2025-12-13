@@ -3,6 +3,8 @@ const rewindBtn= document.getElementById("rewindBtn")
 const pauseBtn= document.getElementById("pauseBtn")
 const bar= document.getElementById("bar")
 const cards= document.querySelectorAll(".card")
+const cardsContainer= document.getElementById("cardsContainer")
+const speedSlider= document.getElementById("speedSlider")
 
 let barPrgress= 0
 let timer
@@ -24,7 +26,7 @@ playBtn.addEventListener("click", ()=>{
             updateCards()
         }
 
-    }, 50)
+    }, 120 - speedSlider.value)
 
 })
 
@@ -53,7 +55,7 @@ rewindBtn.addEventListener("click", ()=>{
 
         }
 
-    }, 50)
+    }, 120 - speedSlider.value)
 
 })
 
@@ -70,6 +72,14 @@ function updateCards(){
 
             card.classList.add("active")
 
+            card.scrollIntoView({
+
+                behavior: "smooth",
+                inline: "center",
+                block: "nearest"
+
+            })
+
         }else{
 
             card.classList.remove("active")
@@ -79,3 +89,16 @@ function updateCards(){
     })
 
 }
+
+
+window.addEventListener("load",() =>{
+
+    cards[0].scrollIntoView({
+
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest"
+
+    })
+
+})
