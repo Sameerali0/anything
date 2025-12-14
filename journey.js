@@ -13,6 +13,15 @@ playBtn.addEventListener("click", ()=>{
 
     clearInterval(timer)
 
+     if(barPrgress <= 100){
+
+        barPrgress= 0
+        bar.style.width= "0%"
+
+        updateCards()
+
+    }
+
     timer= setInterval(()=>{
 
         if(barPrgress >= 100){
