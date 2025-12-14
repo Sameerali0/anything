@@ -132,7 +132,7 @@ fetch(`https://corsproxy.io/?https://siege.hackclub.com/api/public-beta/user/${S
         allProjects.forEach(project =>{
 
             const projectCard= document.createElement("div")
-            projectCard.className= "siege-project"
+            projectCard.className= "projects"
 
             const projectName= project.name
             const projectStatus= project.status
