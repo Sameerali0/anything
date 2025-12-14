@@ -147,3 +147,51 @@ h1{
     width: 0;
     background: #a86bff;
 }
+
+.siege-stats{
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 2px solid #8367e9;
+    margin: 50px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 1000px;
+
+}
+
+.stats-top{
+
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #8367e9;
+    padding-bottom: 15px;
+
+}
+
+.stat{
+
+    border: 2px solid #8367e9;
+    padding: 20px;
+    margin-bottom: 13px;
+
+}
+
+.stat .label{
+
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.stat .value{
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #a86bff;
+
+}
