@@ -41,6 +41,15 @@ pauseBtn.addEventListener("click", ()=>{
 rewindBtn.addEventListener("click", ()=>{
     clearInterval(timer)
 
+    if(barPrgress <= 0){
+
+        barPrgress= 100
+        bar.style.width= "100%"
+
+        updateCards()
+
+    }
+
     timer= setInterval(()=>{
 
         if(barPrgress <= 0){
