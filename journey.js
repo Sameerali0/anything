@@ -13,7 +13,7 @@ playBtn.addEventListener("click", ()=>{
 
     clearInterval(timer)
 
-     if(barPrgress <= 100){
+    if(barPrgress >= 100){
 
         barPrgress= 0
         bar.style.width= "0%"
