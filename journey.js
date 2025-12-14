@@ -5,9 +5,27 @@ const bar= document.getElementById("bar")
 const cards= document.querySelectorAll(".card")
 const cardsContainer= document.getElementById("cardsContainer")
 const speedSlider= document.getElementById("speedSlider")
+const siegeStatsBtn= document.getElementById("siegeStatsBtn")
+const siegeStats= document.getElementById("siegeStats")
 
 let barPrgress= 0
 let timer
+
+siegeStatsBtn.addEventListener("click",() =>{
+
+    if(siegeStats.style.display === "none" || siegeStats.style.display === ""){
+
+        siegeStats.style.display= "flex"
+        siegeStats.scrollIntoView({ behavior: "smooth" })
+
+    }else{
+
+        siegeStats.style.display= "none"
+
+    }
+
+})
+
 
 playBtn.addEventListener("click", ()=>{
 
