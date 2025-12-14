@@ -152,7 +152,7 @@ window.addEventListener("load", ()=>{
 
         loading.classList.add("hide")
 
-    }, 2000)
+    }, 1000)
 
 })
 

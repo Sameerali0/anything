@@ -155,3 +155,16 @@ fetch(`https://corsproxy.io/?https://siege.hackclub.com/api/public-beta/user/${S
     console.error("Siege API error:", error)
 
   })
+
+
+window.addEventListener("load", ()=>{
+
+    const loading= document.querySelector(".loading-page")
+
+    setTimeout(() =>{
+
+        loading.classList.add("hide")
+
+    }, 1000)
+
+})
