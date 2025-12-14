@@ -38,6 +38,39 @@ h1{
 }
 
 
+.speed-control{
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #151426;
+    border: 1px solid #7f73f133;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 19px;
+}
+
+#speedSlider{
+
+    appearance: none;
+    height: 4px;
+    background: #241b38;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+#speedSlider::-webkit-slider-thumb{
+
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #a86bff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #a86bff;
+
+}
+
 .controls button{
 
     background: #151426;
@@ -155,16 +188,17 @@ h1{
     gap: 30px;
     border: 2px solid #8367e9;
     margin: 50px auto;
-    padding: 20px 20px;
-    width: 90%;
-    max-width: 1000px;
+    padding: 20px;
+    max-width: 1100px;
 
 }
 
-.siege-stats .heading{
+.siege-stats h2{
 
     font-size: 40px;
     color: #a86bff;
+    margin-top: 10px;
+    margin-bottom: 15px;
 
 }
 
