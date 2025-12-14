@@ -102,3 +102,56 @@ window.addEventListener("load",() =>{
     })
 
 })
+
+const SLACK_ID= "U099LG04GDN"
+
+const totalProjects= document.getElementById("totalProjects")
+const completedProjects= document.getElementById("completedProjects")
+const totalCoins= document.getElementById("coins")
+const projectsList= document.getElementById("projectsList")
+
+
+fetch(`https://corsproxy.io/?https://siege.hackclub.com/api/public-beta/user/${SLACK_ID}`)
+
+    .then(res => res.json())
+    .then( data =>{
+
+        console.log("Siege Data:", data)
+
+        const allProjects= data.projects
+
+        const finishedProjects= allProjects.filter(
+
+            project => project.status === "finished"
+        )
+
+        totalProjects.textContent= allProjects.length
+        completedProjects.textContent= finishedProjects.length
+        totalCoins.textContent= data.coins
+
+        allProjects.forEach(project =>{
+
+            const projectCard= document.createElement("div")
+            projectCard.className= "siege-project"
+
+            const projectName= project.name
+            const projectStatus= project.status
+            const projectWeek= project.week_badge_text
+
+            projectCard.innerHTML= `
+                <h4>${projectName}</h4>
+                <p>Status: <span>${projectStatus}</span></p>
+                <p>${projectWeek}</p>
+            `;
+
+            projectsList.appendChild(projectCard)
+
+        })
+
+    })
+
+    .catch(error =>{
+
+    console.error("Siege API error:", error)
+
+  })
