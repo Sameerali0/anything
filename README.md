@@ -1,5 +1,8 @@
 # My Web Dev Journey
 
+## screenshot
+![My Web Dev Journey Screenshot](images/journeyScreenshot.png)
+
 # Personal Portfolio
 
 This is my personal portfolio website which includes Home section with my introduction and profile image and About section, Skills section showing my skills with progress bars, Projects section with a slider to show my projects and Contact section with contact form and social media links. Also a dark and light theme and a loading page with loading animation.
