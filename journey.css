@@ -112,7 +112,17 @@ h1{
     border-radius: 10px;
     cursor: pointer;
     font-size: 19px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 
+}
+
+.controls button i{
+
+    height: 20px;
+    width: 25px;
+    
 }
 
 .journey{
