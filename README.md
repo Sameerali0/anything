@@ -3,7 +3,7 @@
 This project shows my web development journey i built it using HTML, CSS, and JavaScript. The journey progress moves with play, pause, and rewind buttons, and each card highlights as the progress bar moves i also added a “Siege Stats” button that shows my Siege stats i use Siege API for my siege information and i also add loading page in this project.
 
 ## !
-During Siege Week 15, I worked on updating my portfolio and creating My Web Dev Journey project.
+During Siege Week 15, I worked on updating my week 14 project and creating My Web Dev Journey project.
 
 ## screenshot
 ![My Web Dev Journey Screenshot](images/journeyScreenshot.png)

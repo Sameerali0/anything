@@ -3,12 +3,11 @@ const rewindBtn= document.getElementById("rewindBtn")
 const pauseBtn= document.getElementById("pauseBtn")
 const bar= document.getElementById("bar")
 const cards= document.querySelectorAll(".card")
-const cardsContainer= document.getElementById("cardsContainer")
 const speedSlider= document.getElementById("speedSlider")
 const siegeStatsBtn= document.getElementById("siegeStatsBtn")
 const siegeStats= document.getElementById("siegeStats")
 
-let barPrgress= 0
+let barProgress= 0
 let timer
 
 siegeStatsBtn.addEventListener("click",() =>{
@@ -29,11 +28,15 @@ siegeStatsBtn.addEventListener("click",() =>{
 
 playBtn.addEventListener("click", ()=>{
 
-    clearInterval(timer)
+    if(timer){
+        
+        clearInterval(timer)
 
-    if(barPrgress >= 100){
+    }
 
-        barPrgress= 0
+    if(barProgress >= 100){
+
+        barProgress= 0
         bar.style.width= "0%"
 
         updateCards()
@@ -42,13 +45,13 @@ playBtn.addEventListener("click", ()=>{
 
     timer= setInterval(()=>{
 
-        if(barPrgress >= 100){
+        if(barProgress >= 100){
 
             clearInterval(timer)
         }else{
 
-            barPrgress += 1
-            bar.style.width= barPrgress + "%"
+            barProgress += 1
+            bar.style.width= barProgress + "%"
 
             updateCards()
         }
@@ -60,7 +63,10 @@ playBtn.addEventListener("click", ()=>{
 
 pauseBtn.addEventListener("click", ()=>{
 
-    clearInterval(timer)
+    if(timer){
+        
+        clearInterval(timer)
+    }
 
 })
 
@@ -68,9 +74,9 @@ pauseBtn.addEventListener("click", ()=>{
 rewindBtn.addEventListener("click", ()=>{
     clearInterval(timer)
 
-    if(barPrgress <= 0){
+    if(barProgress <= 0){
 
-        barPrgress= 100
+        barProgress= 100
         bar.style.width= "100%"
 
         updateCards()
@@ -79,13 +85,13 @@ rewindBtn.addEventListener("click", ()=>{
 
     timer= setInterval(()=>{
 
-        if(barPrgress <= 0){
+        if(barProgress <= 0){
             clearInterval(timer)
 
         }else{
 
-            barPrgress -= 1
-            bar.style.width= barPrgress +"%"
+            barProgress -= 1
+            bar.style.width= barProgress +"%"
 
             updateCards()
 
@@ -104,7 +110,7 @@ function updateCards(){
         const cardStartPoint= cardIndex * percentPerCard
         const cardEndPoint= cardStartPoint + percentPerCard
 
-        if(barPrgress >= cardStartPoint && barPrgress < cardEndPoint){
+        if(barProgress >= cardStartPoint && barProgress < cardEndPoint){
 
             card.classList.add("active")
 
@@ -128,14 +134,24 @@ function updateCards(){
 
 
 window.addEventListener("load",() =>{
+    if(cards.length > 0){
 
-    cards[0].scrollIntoView({
+        cards[0].scrollIntoView({
 
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest"
+            behavior: "smooth",
+            inline: "center",
+            block: "nearest"
 
-    })
+        })
+    }    
+
+    const loading= document.querySelector(".loading-page")
+
+    setTimeout(() =>{
+
+        loading.classList.add("hide")
+
+    }, 1000)
 
 })
 
@@ -151,8 +167,6 @@ fetch(`https://corsproxy.io/?https://siege.hackclub.com/api/public-beta/user/${S
 
     .then(res => res.json())
     .then( data =>{
-
-        console.log("Siege Data:", data)
 
         const allProjects= data.projects
 
@@ -188,19 +202,7 @@ fetch(`https://corsproxy.io/?https://siege.hackclub.com/api/public-beta/user/${S
 
     .catch(error =>{
 
-    console.error("Siege API error:", error)
+        console.error("Siege API error:", error)
 
   })
 
-
-window.addEventListener("load", ()=>{
-
-    const loading= document.querySelector(".loading-page")
-
-    setTimeout(() =>{
-
-        loading.classList.add("hide")
-
-    }, 1000)
-
-})
